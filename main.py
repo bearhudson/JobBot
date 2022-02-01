@@ -24,7 +24,10 @@ driver.get("https://www.linkedin.com/jobs/")
 time.sleep(1)
 job_search = driver.find_element(By.CLASS_NAME, 'jobs-home-soho-search-card__truncated-text')
 job_search.click()
-job_list = driver.find_elements(By.CLASS_NAME, 'job-card-container__link')
+job_list = driver.find_elements(By.CSS_SELECTOR, '#job-card-list__title')
+print(job_list.text)
+
+driver.quit()
 
 in_loop = True
 
